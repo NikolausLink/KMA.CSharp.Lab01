@@ -1,0 +1,28 @@
+﻿<Window x:Class="Lab01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <TextBlock FontSize = "20" Text="Choose Date:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="42,0,42,12"/>
+        <DatePicker Grid.Row = "0" SelectedDate="{Binding GetDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="41" VerticalAlignment="Top" Margin="0,0,8,0" Grid.Column="1"/>
+        <TextBlock FontSize = "20" Text="Your Age:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock FontSize = "20" Text="{Binding Age, Mode=OneWay, UpdateSourceTrigger=PropertyChanged }" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock FontSize = "20" Text="Your Zodiac:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock FontSize = "20" Text ="{Binding Horoscope, Mode=OneWay, UpdateSourceTrigger=PropertyChanged }" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+    </Grid>
+</Window>
